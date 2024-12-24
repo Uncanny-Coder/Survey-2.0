@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Survey</title>
+</head>
+
+<body>
+
+  <!-- Survey Template -->
+  <div id="survey-template" class="template">
+    <div class="q1">
+      <h3>Please Enter your Email</h3>
+      <input type="email" placeholder="example@example.com" id="email" />
+      <button class="button" id="submitBtn">Submit</button>
+    </div>
+  </div>
+
+  <!-- Mcq Template -->
+  <div id="mcq-template" class="template">
+    <div class=" q3">
+      <h2>What didn't you like about the shopping experience?</h2>
+      <ul class="options">
+        <li>
+          <input type="radio" name="option" onclick="nextQuestion()" id="option1"
+            value="The website was hard to navigate" />
+          <label for="option1">The website was hard to navigate</label>
+        </li>
+        <li>
+          <input type="radio" name="option" onclick="nextQuestion()" id="option2" value="The website was slow" />
+          <label for="option2">The website was slow</label>
+        </li>
+        <li>
+          <input type="radio" name="option" onclick="nextQuestion()" id="option3"
+            value="The checkout process was confusing" />
+          <label for="option3">The checkout process was confusing</label>
+        </li>
+        <li>
+          <input type="radio" name="option" onclick="nextQuestion()" id="option4"
+            value="There were too many pop-ups or ads" />
+          <label for="option4">There were too many pop-ups or ads</label>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Radio Template -->
+  <div id="radio-template" class="template">
+    <div class="q2">
+      <h3>How would you rate your shopping experience?</h3>
+      <div class="rating">
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating1" value="1" />
+        <label for="rating1">1</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating2" value="2" />
+        <label for="rating2">2</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating3" value="3" />
+        <label for="rating3">3</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating4" value="4" />
+        <label for="rating4">4</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating5" value="5" />
+        <label for="rating5">5</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating6" value="6" />
+        <label for="rating6">6</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating7" value="7" />
+        <label for="rating7">7</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating8" value="8" />
+        <label for="rating8">8</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating9" value="9" />
+        <label for="rating9">9</label>
+        <input type="radio" name="rating" onclick="nextQuestion()" id="rating10" value="10" />
+        <label for="rating10">10</label>
+      </div>
+    </div>
+  </div>
+
+  <div id="thanks-template" class="template">
+    <div class="thanks">
+      <div class="left-container">
+        <h1>Thanks for your Feedback!</h1>
+        <p>
+          We appreciate you taking the time to share your thoughts with us. Your
+          input helps us improve and provide a better shopping experience for you
+          and others.
+        </p>
+        <button class="button return">Return to Homepage</button>
+      </div>
+      <img src="./image.png" alt="img not found" />
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
