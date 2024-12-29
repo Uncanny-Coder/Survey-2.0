@@ -10,38 +10,48 @@
 
 <body>
 
+  <!-- Toaster Container -->
+  <div id="toaster" class="toaster hidden">
+    <p id="toaster-message"></p>
+  </div>
+
   <!-- Survey Template -->
   <div id="survey-template" class="template">
     <div class="q1">
-      <h3>Please Enter your Email</h3>
+      <h3>text</h3>
       <input type="email" placeholder="example@example.com" id="email" />
-      <button class="button" id="submitBtn">Submit</button>
+      <button class="button" id="submitBtn" onclick="nextQuestion()">Submit</button>
     </div>
   </div>
 
   <!-- Mcq Template -->
   <div id="mcq-template" class="template">
     <div class=" q3">
-      <h2>What didn't you like about the shopping experience?</h2>
+      <h2>Question</h2>
       <ul class="options">
         <li>
           <input type="radio" name="option" onclick="nextQuestion()" id="option1"
             value="The website was hard to navigate" />
-          <label for="option1">The website was hard to navigate</label>
+          <label for="option1">1</label>
         </li>
         <li>
           <input type="radio" name="option" onclick="nextQuestion()" id="option2" value="The website was slow" />
-          <label for="option2">The website was slow</label>
+          <label for="option2">2</label>
         </li>
         <li>
           <input type="radio" name="option" onclick="nextQuestion()" id="option3"
             value="The checkout process was confusing" />
-          <label for="option3">The checkout process was confusing</label>
+          <label for="option3">3</label>
         </li>
         <li>
           <input type="radio" name="option" onclick="nextQuestion()" id="option4"
             value="There were too many pop-ups or ads" />
-          <label for="option4">There were too many pop-ups or ads</label>
+          <label for="option4">4</label>
+        </li>
+        <li>
+          <input type="radio" name="option" onclick="nextQuestion()" id="option4"
+            value="There were too many pop-ups or ads" />
+          <label for="option5">5</label>
         </li>
       </ul>
     </div>
