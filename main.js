@@ -74,3 +74,48 @@ const questions= [
     showFifthOption: true,
   },
 ]
+
+// State Variables
+let currentQuestionIndex = 0;
+let history = [];
+const userResponse =[];
+
+//Dom Elements
+const templates =document.querySelectorAll('.template');
+const prevButton = document.createElement('Button');
+previousButton.textContent = 'Previous';
+prevButton.classList.add('button', 'prev');
+prevButton.style.display = 'none';
+document.body.appendChild(prevButton);
+
+//Hide All Templates
+function hideAllTemplates(){
+  templates.forEach(template => template.classList.remove ('active'));
+}
+
+//Render Next Question
+function renderQuestion(){
+  hideAllTemplates();
+
+  const question = questions[currentQuestionIndex];
+  const template = document.getElementById(question.templateId);
+
+  if (!template) return;
+
+  template.classList.add('active');
+  
+
+  //Inject Question text
+  if (question.text) {
+    const questionText = template.querySelector('.question-text');
+    if (questionText) questionText.textContent = question.text;
+  }
+
+  //Show,Hide Previous Buttton
+  prevButton.style.display = history.length >0 ? 'inline-block' : 'none';
+
+  //Handle specific Template
+  if(question.type === 'survey') {
+    const input = template.querySelector('input[type="email"]');
+    
+  }};
